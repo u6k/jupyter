@@ -7,3 +7,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 ### Added
 - [#9128: ベースのDockerイメージを構築する](https://redmine.u6k.me/issues/9128)
+- [#9129: GitHub Actionsでビルドする](https://redmine.u6k.me/issues/9129)

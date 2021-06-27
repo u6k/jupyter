@@ -1,19 +1,19 @@
 version: '3'
 
 services:
-    notebook:
-        image: u6kapps/jupyter
-        build: .
-        user: root
-        ports:
-            - 18888:8888
-        environment:
-            - TZ=Asia/Tokyo
-            - JUPYTER_ENABLE_LAB=yes
-            - GRANT_SUDO=yes
-        volumes:
-            - notebook:/home/jovyan/work
-        command: start-notebook.sh
+  notebook:
+    image: u6kapps/jupyter
+    build: .
+    user: root
+    ports:
+      - 18888:8888
+    environment:
+      - TZ=Asia/Tokyo
+      - JUPYTER_ENABLE_LAB=yes
+      - GRANT_SUDO=yes
+    volumes:
+      - notebook:/home/jovyan/work
+    command: start-notebook.sh
 
 volumes:
-    notebook:
+  notebook:
