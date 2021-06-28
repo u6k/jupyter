@@ -24,6 +24,7 @@ jobs:
   # Slack notification
   notify:
     runs-on: ubuntu-latest
+    steps:
       - name: Slack notification on success
         if: success()
         uses: rtCamp/action-slack-notify@v2.0.2
