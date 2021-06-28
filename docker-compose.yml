@@ -2,9 +2,8 @@ version: '3'
 
 services:
   notebook:
-    image: u6kapps/jupyter
+    image: ghcr.io/u6k/jupyter
     build: .
-    user: root
     ports:
       - 18888:8888
     environment:
@@ -13,7 +12,9 @@ services:
       - GRANT_SUDO=yes
     volumes:
       - notebook:/home/jovyan/work
+      - settings:/home/jovyan/.jupyter
     command: start-notebook.sh
 
 volumes:
   notebook:
+  settings:
