@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  notebook:
+    image: ghcr.io/u6k/jupyter
+    build: .
+    ports:
+      - 18888:8888
+    environment:
+      - TZ=Asia/Tokyo
+      - JUPYTER_ENABLE_LAB=yes
+      - GRANT_SUDO=yes
+    volumes:
+      - notebook:/home/jovyan/work
+      - settings:/home/jovyan/.jupyter
+    command: start-notebook.sh
+
+volumes:
+  notebook:
+  settings:
