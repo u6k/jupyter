@@ -7,7 +7,7 @@ on:
 
 env:
   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK_URL }}
-  IMAGE_NAME: mlflow
+  IMAGE_NAME: jupyter
 
 jobs:
   build_and_push:
