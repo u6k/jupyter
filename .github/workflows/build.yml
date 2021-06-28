@@ -23,6 +23,7 @@ jobs:
           docker build .
   # Slack notification
   notify:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Slack notification on success
